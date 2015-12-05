@@ -98,4 +98,28 @@ def parse_trace(filename):
         args = method_args[1][:-1].split(", ")
     
         functions = functions + [(method, args)]
-    print functions
+    return functions
+
+def discover_vulnerability(dict_patterns, functions):
+    warnings = []
+    for current_f in functions :
+        for pattern in dict_patterns:
+            for pat_carac in dict_patterns[pattern] :
+                #logo a function é sensitive_sink
+                if current_f[0] in pat_carac[2]:
+                    warn = [pattern,"",current_f[0],current_f[1]]
+                    last_sink_index = functions.index(current_f)
+                    #look for sanitizer
+                    for sanit_tuple in reversed(functions[:last_sink_index]):
+                        if sanit_tuple[0] in pat_carac[1]:
+                            warn[1] = sanit_tuple[0]
+                            warnings += [warn]
+    
+    print "---- Found the following vulnerability ----"                        
+    for warn in warnings:
+        print "- Vulnerability: ", warn[0]
+        print "- Validation/Sanitization functions: ", warn[1]
+        print "- Sensitive Sink function: ", warn[2]
+        print "- Args used by Sensitive Sink function: ", warn[3]
+        
+#discover_vulnerability(vul_detector("patterns.txt"), parse_trace("trace.xt"))

@@ -7,6 +7,10 @@ $_GET,$_POST,$_COOKIE
 pg_escape_string,pg_escape_bytea
 pg_query,pg_send_query
 XSS
-$_SESSION,$_COOKIE 
-mony_piggy,pg_escape_bytea
-pg_query
+$_FILES,$_COOKIE,$_SERVERS
+htmlentities,strip_tags,urlencode
+echo,error,die,print
+PHP Code Injection
+$_POST,$_COOKIE,$_REQUEST
+htmlentities,htmlspecialchars,strip_tags,urlencode
+eval
