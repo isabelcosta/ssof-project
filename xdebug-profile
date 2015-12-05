@@ -1,0 +1,65 @@
+
+==== NEW PROFILING FILE ==============================================
+version: 1
+creator: xdebug 2.4.0RC2
+cmd: /var/www/html/index.php
+part: 1
+positions: line
+
+events: Time
+
+fl=(1) php:internal
+fn=(1) php::file_exists
+47 18
+
+fl=(1)
+fn=(2) php::json_encode
+50 14
+
+fl=(1)
+fn=(3) php::file_put_contents
+50 84
+
+fl=(1)
+fn=(4) php::file_get_contents
+54 51
+
+fl=(1)
+fn=(5) php::json_decode
+55 2
+
+fl=(2) /var/www/html/index.php
+fn=(6) loadData
+44 146
+cfl=(1)
+cfn=(1)
+calls=1 0 0
+47 18
+cfl=(1)
+cfn=(2)
+calls=1 0 0
+50 14
+cfl=(1)
+cfn=(3)
+calls=1 0 0
+50 84
+cfl=(1)
+cfn=(4)
+calls=1 0 0
+54 51
+cfl=(1)
+cfn=(5)
+calls=1 0 0
+55 2
+
+fl=(2)
+fn=(7) {main}
+
+summary: 560
+
+1 244
+cfl=(2)
+cfn=(6)
+calls=1 0 0
+26 315
+

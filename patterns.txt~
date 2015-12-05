@@ -6,7 +6,3 @@ SQL injection
 $_GET,$_POST,$_COOKIE 
 pg_escape_string,pg_escape_bytea
 pg_query,pg_send_query
-XSS
-$_SESSION,$_COOKIE 
-mony_piggy,pg_escape_bytea
-pg_query
