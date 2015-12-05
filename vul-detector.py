@@ -1,4 +1,4 @@
-def vul_detector(filename):
+def get_patterns(filename):
     #file: 'patterns.txt'
     f = open(filename, 'r')
     #print f
@@ -120,6 +120,6 @@ def discover_vulnerability(dict_patterns, functions):
         print "- Vulnerability: ", warn[0]
         print "- Validation/Sanitization functions: ", warn[1]
         print "- Sensitive Sink function: ", warn[2]
-        print "- Args used by Sensitive Sink function: ", warn[3]
+        print "- Args used by Sensitive Sink function: ", ", ".join(warn[3])
         
-#discover_vulnerability(vul_detector("patterns.txt"), parse_trace("trace.xt"))
+#discover_vulnerability(get_patterns("patterns.txt"), parse_trace("trace.xt"))
