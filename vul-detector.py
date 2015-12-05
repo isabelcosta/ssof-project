@@ -113,13 +113,27 @@ def discover_vulnerability(dict_patterns, functions):
                     for sanit_tuple in reversed(functions[:last_sink_index]):
                         if sanit_tuple[0] in pat_carac[1]:
                             warn[1] = sanit_tuple[0]
-                            warnings += [warn]
-    
-    print "---- Found the following vulnerability ----"                        
+                            break
+                    warnings += [warn]
+                            
+                    
+                    
+    print "-----------------------------------------------------------------"                        
+    print "---- Found vulnerability controlled by sanitization function ----"    
     for warn in warnings:
-        print "- Vulnerability: ", warn[0]
-        print "- Validation/Sanitization functions: ", warn[1]
-        print "- Sensitive Sink function: ", warn[2]
-        print "- Args used by Sensitive Sink function: ", ", ".join(warn[3])
-        
+        if(warn[1] != ''):
+            print "- Vulnerability: ", warn[0]
+            print "- Validation/Sanitization functions: ", warn[1]
+            print "- Sensitive Sink function: ", warn[2]
+            print "- Args used by Sensitive Sink function: ", ", ".join(warn[3])
+
+    print "-----------------------------------------------------------------"                        
+    print "---- Found possible vulnerability ----"                                                
+    for warn in warnings:
+        if(warn[1] == ''):
+            print "- Vulnerability: ", warn[0]
+            print "- Sensitive Sink function: ", warn[2]
+            print "- Args used by Sensitive Sink function: ", ", ".join(warn[3])
+            
+    print "-----------------------------------------------------------------"        
 #discover_vulnerability(get_patterns("patterns.txt"), parse_trace("trace.xt"))
