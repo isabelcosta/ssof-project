@@ -1,0 +1,24 @@
+TRACE START [2015-12-06 03:16:47]
+    0.0001     125876   -> {main}() /var/www/html/index.php:0
+    0.0002     125904     -> mysql_escape_string('1=1\'--') /var/www/html/index.php:30
+    0.0002     125928      >=> '1=1\\\'--'
+    0.0002     125904     -> mysql_escape_string('') /var/www/html/index.php:31
+    0.0003     125920      >=> ''
+    0.0003     126000     -> mysql_query('SELECT * FROM users WHERE username=1=1\'-- AND password=') /var/www/html/index.php:32
+    0.0008     126204      >=> FALSE
+    0.0009     126108    >=> 1
+    0.0009       8336
+TRACE END   [2015-12-06 03:16:47]
+
+TRACE START [2015-12-06 03:17:03]
+    0.0001     125892   -> {main}() /var/www/html/index.php:0
+    0.0001     125920     -> mysql_escape_string('isabel') /var/www/html/index.php:30
+    0.0002     125944      >=> 'isabel'
+    0.0002     125920     -> mysql_escape_string('ssof2015') /var/www/html/index.php:31
+    0.0002     125948      >=> 'ssof2015'
+    0.0002     126020     -> mysql_query('SELECT * FROM users WHERE username=isabel AND password=ssof2015') /var/www/html/index.php:32
+    0.0005     126224      >=> FALSE
+    0.0006     126124    >=> 1
+    0.0007       8340
+TRACE END   [2015-12-06 03:17:03]
+

@@ -119,8 +119,7 @@ def discover_vulnerability(dict_patterns, functions):
                     
                     
     print "-----------------------------------------------------------------"                        
-    print "---- Found a possible vulnerability with a sanitizer function ---"
-    print "-----------------------------------------------------------------"    
+    print "---- Found a possible vulnerability with a sanitizer function ---"    
     for warn in warnings:
         if(warn[1] != ''):
             print "- Vulnerability: ", warn[0]
