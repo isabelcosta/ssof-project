@@ -1,24 +1,76 @@
-TRACE START [2015-12-06 01:49:50]
+TRACE START [2015-12-06 02:00:29]
     0.0001     125332   -> {main}() /var/www/html/index.php:0
-    0.0001     125360     -> shell_exec('DROP -t') /var/www/html/index.php:21
-    0.0016     125400      >=> NULL
-    0.0016     125400     -> mysql_escape_string('DROP -t') /var/www/html/index.php:44
-    0.0016     125424      >=> 'DROP -t'
-    0.0016     125400     -> mysql_query('DROP -t') /var/www/html/index.php:45
-    0.0019     125576      >=> FALSE
-    0.0019     125576    >=> 1
-    0.0020       8308
-TRACE END   [2015-12-06 01:49:50]
+    0.0002     125360     -> mysql_escape_string('DROP -t') /var/www/html/index.php:49
+    0.0002     125384      >=> 'DROP -t'
+    0.0002     125360     -> mysql_query('DROP -t') /var/www/html/index.php:50
+    0.0005     125572      >=> FALSE
+    0.0005     125572    >=> 1
+    0.0006       8308
+TRACE END   [2015-12-06 02:00:29]
 
-TRACE START [2015-12-06 01:49:59]
-    0.0001     125328   -> {main}() /var/www/html/index.php:0
-    0.0001     125356     -> shell_exec('pwd') /var/www/html/index.php:21
-    0.0015     125420      >=> '/var/www/html\n'
-    0.0015     125396     -> mysql_escape_string('pwd') /var/www/html/index.php:44
-    0.0016     125412      >=> 'pwd'
-    0.0016     125396     -> mysql_query('pwd') /var/www/html/index.php:45
-    0.0019     125560      >=> FALSE
-    0.0019     125560    >=> 1
-    0.0020       8304
-TRACE END   [2015-12-06 01:49:59]
+TRACE START [2015-12-06 02:00:33]
+    0.0001     125324   -> {main}() /var/www/html/index.php:0
+    0.0001     125352     -> shell_exec('ls') /var/www/html/index.php:23
+    0.0026     125436      >=> 'index-old.php\nindex.php\nindex.php~\n'
+    0.0027     125392    >=> 1
+    0.0027       8300
+TRACE END   [2015-12-06 02:00:33]
+
+TRACE START [2015-12-06 02:09:01]
+    0.0002     113212   -> {main}() Command line code:0
+    0.0002     113268     -> ini_get_all('session') Command line code:1
+    0.0004     127660      >=> array ('session.auto_start' => array ('global_value' => '0', 'local_value' => '0', 'access' => 2), 'session.cache_expire' => array ('global_value' => '180', 'local_value' => '180', 'access' => 7), 'session.cache_limiter' => array ('global_value' => 'nocache', 'local_value' => 'nocache', 'access' => 7), 'session.cookie_domain' => array ('global_value' => '', 'local_value' => '', 'access' => 7), 'session.cookie_httponly' => array ('global_value' => '', 'local_value' => '', 'access' => 7), 'session.cookie_lifetime' => array ('global_value' => '0', 'local_value' => '0', 'access' => 7), 'session.cookie_path' => array ('global_value' => '/', 'local_value' => '/', 'access' => 7), 'session.cookie_secure' => array ('global_value' => '', 'local_value' => '', 'access' => 7), 'session.entropy_file' => array ('global_value' => '/dev/urandom', 'local_value' => '/dev/urandom', 'access' => 7), 'session.entropy_length' => array ('global_value' => '32', 'local_value' => '32', 'access' => 7), 'session.gc_divisor' => array ('global_value' => '1000', 'local_value' => '1000', 'access' => 7), 'session.gc_maxlifetime' => array ('global_value' => '1440', 'local_value' => '1440', 'access' => 7), 'session.gc_probability' => array ('global_value' => '0', 'local_value' => '0', 'access' => 7), 'session.hash_bits_per_character' => array ('global_value' => '5', 'local_value' => '5', 'access' => 7), 'session.hash_function' => array ('global_value' => '0', 'local_value' => '0', 'access' => 7), 'session.name' => array ('global_value' => 'PHPSESSID', 'local_value' => 'PHPSESSID', 'access' => 7), 'session.referer_check' => array ('global_value' => '', 'local_value' => '', 'access' => 7), 'session.save_handler' => array ('global_value' => 'files', 'local_value' => 'files', 'access' => 7), 'session.save_path' => array ('global_value' => '/var/lib/php5/sessions', 'local_value' => '/var/lib/php5/sessions', 'access' => 7), 'session.serialize_handler' => array ('global_value' => 'php', 'local_value' => 'php', 'access' => 7), 'session.upload_progress.cleanup' => array ('global_value' => '1', 'local_value' => '1', 'access' => 2), 'session.upload_progress.enabled' => array ('global_value' => '1', 'local_value' => '1', 'access' => 2), 'session.upload_progress.freq' => array ('global_value' => '1%', 'local_value' => '1%', 'access' => 2), 'session.upload_progress.min_freq' => array ('global_value' => '1', 'local_value' => '1', 'access' => 2), 'session.upload_progress.name' => array ('global_value' => 'PHP_SESSION_UPLOAD_PROGRESS', 'local_value' => 'PHP_SESSION_UPLOAD_PROGRESS', 'access' => 2), 'session.upload_progress.prefix' => array ('global_value' => 'upload_progress_', 'local_value' => 'upload_progress_', 'access' => 2), 'session.use_cookies' => array ('global_value' => '1', 'local_value' => '1', 'access' => 7), 'session.use_only_cookies' => array ('global_value' => '1', 'local_value' => '1', 'access' => 7), 'session.use_strict_mode' => array ('global_value' => '0', 'local_value' => '0', 'access' => 7), 'session.use_trans_sid' => array ('global_value' => '0', 'local_value' => '0', 'access' => 7))
+    0.0008     113808    >=> NULL
+    0.0008       8220
+TRACE END   [2015-12-06 02:09:01]
+
+TRACE START [2015-12-06 02:30:01]
+    0.0006     126528   -> {main}() /var/www/html/index.php:0
+    0.0007     126556     -> shell_exec('ls') /var/www/html/index.php:59
+    0.0440     126600      >=> 'index-old.php\nindex.php\nindex.php~\n'
+    0.0441     126556    >=> 1
+    0.0442       8300
+TRACE END   [2015-12-06 02:30:01]
+
+TRACE START [2015-12-06 02:30:17]
+    0.0001     125872   -> {main}() /var/www/html/index.php:0
+    0.0003     125900    >=> 1
+    0.0003       8336
+TRACE END   [2015-12-06 02:30:17]
+
+TRACE START [2015-12-06 02:32:33]
+    0.0003     127072   -> {main}() /var/www/html/index.php:0
+    0.0004     127100     -> mysql_escape_string('belinha') /var/www/html/index.php:30
+    0.0005     127124      >=> 'belinha'
+    0.0005     127100     -> mysql_escape_string('joki') /var/www/html/index.php:31
+    0.0006     127120      >=> 'joki'
+    0.0006     127200     -> mysql_query('SELECT * FROM users WHERE username=belinha AND password=joki') /var/www/html/index.php:32
+    0.0012     127364      >=> FALSE
+    0.0013     127264    >=> 1
+    0.0013       8336
+TRACE END   [2015-12-06 02:32:33]
+
+TRACE START [2015-12-06 02:32:41]
+    0.0001     125876   -> {main}() /var/www/html/index.php:0
+    0.0002     125904     -> mysql_escape_string('vdfvce') /var/www/html/index.php:30
+    0.0002     125928      >=> 'vdfvce'
+    0.0002     125904     -> mysql_escape_string('fvdfc') /var/www/html/index.php:31
+    0.0002     125924      >=> 'fvdfc'
+    0.0003     126004     -> mysql_query('SELECT * FROM users WHERE username=vdfvce AND password=fvdfc') /var/www/html/index.php:32
+    0.0006     126208      >=> FALSE
+    0.0007     126108    >=> 1
+    0.0008       8336
+TRACE END   [2015-12-06 02:32:41]
+
+TRACE START [2015-12-06 02:32:55]
+    0.0001     125872   -> {main}() /var/www/html/index.php:0
+    0.0002     125900     -> mysql_escape_string('cvcx') /var/www/html/index.php:30
+    0.0002     125920      >=> 'cvcx'
+    0.0002     125900     -> mysql_escape_string('dcxds') /var/www/html/index.php:31
+    0.0003     125920      >=> 'dcxds'
+    0.0003     125996     -> mysql_query('SELECT * FROM users WHERE username=cvcx AND password=dcxds') /var/www/html/index.php:32
+    0.0006     126200      >=> FALSE
+    0.0007     126104    >=> 1
+    0.0008       8332
+TRACE END   [2015-12-06 02:32:55]
 
