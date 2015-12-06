@@ -1,42 +1,24 @@
-TRACE START [2015-12-06 01:32:57]
-    0.0005     124988   -> {main}() /var/www/html/index.php:0
-    0.0006     125044     -> shell_exec(NULL) /var/www/html/index.php:21
-    0.0020     125060      >=> NULL
-    0.0021     125044     -> mysql_escape_string(NULL) /var/www/html/index.php:23
-    0.0021     125076      >=> ''
-    0.0022     125044     -> mysql_query(NULL) /var/www/html/index.php:24
-    0.0985     125224      >=> FALSE
-    0.0986     125208     -> shell_exec(NULL) /var/www/html/index.php:28
-    0.1000     125224      >=> NULL
-    0.1001     125180    >=> 1
-    0.1003       8280
-TRACE END   [2015-12-06 01:32:57]
-
-TRACE START [2015-12-06 01:33:05]
+TRACE START [2015-12-06 01:49:50]
     0.0001     125332   -> {main}() /var/www/html/index.php:0
-    0.0001     125360     -> shell_exec('hey') /var/www/html/index.php:21
+    0.0001     125360     -> shell_exec('DROP -t') /var/www/html/index.php:21
     0.0016     125400      >=> NULL
-    0.0016     125400     -> mysql_escape_string('hey') /var/www/html/index.php:23
-    0.0016     125416      >=> 'hey'
-    0.0016     125400     -> mysql_query('hey') /var/www/html/index.php:24
-    0.0743     125568      >=> FALSE
-    0.0743     125568     -> shell_exec('hey') /var/www/html/index.php:28
-    0.0759     125568      >=> NULL
-    0.0760     125568    >=> 1
-    0.0761       8304
-TRACE END   [2015-12-06 01:33:05]
+    0.0016     125400     -> mysql_escape_string('DROP -t') /var/www/html/index.php:44
+    0.0016     125424      >=> 'DROP -t'
+    0.0016     125400     -> mysql_query('DROP -t') /var/www/html/index.php:45
+    0.0019     125576      >=> FALSE
+    0.0019     125576    >=> 1
+    0.0020       8308
+TRACE END   [2015-12-06 01:49:50]
 
-TRACE START [2015-12-06 01:33:11]
-    0.0002     125336   -> {main}() /var/www/html/index.php:0
-    0.0002     125364     -> shell_exec('okokuvrey') /var/www/html/index.php:21
-    0.0082     125404      >=> NULL
-    0.0084     125404     -> mysql_escape_string('okokuvrey') /var/www/html/index.php:23
-    0.0086     125432      >=> 'okokuvrey'
-    0.0086     125404     -> mysql_query('okokuvrey') /var/www/html/index.php:24
-    0.0093     125568      >=> FALSE
-    0.0093     125568     -> shell_exec('okokuvrey') /var/www/html/index.php:28
-    0.0112     125568      >=> NULL
-    0.0113     125568    >=> 1
-    0.0115       8308
-TRACE END   [2015-12-06 01:33:11]
+TRACE START [2015-12-06 01:49:59]
+    0.0001     125328   -> {main}() /var/www/html/index.php:0
+    0.0001     125356     -> shell_exec('pwd') /var/www/html/index.php:21
+    0.0015     125420      >=> '/var/www/html\n'
+    0.0015     125396     -> mysql_escape_string('pwd') /var/www/html/index.php:44
+    0.0016     125412      >=> 'pwd'
+    0.0016     125396     -> mysql_query('pwd') /var/www/html/index.php:45
+    0.0019     125560      >=> FALSE
+    0.0019     125560    >=> 1
+    0.0020       8304
+TRACE END   [2015-12-06 01:49:59]
 
