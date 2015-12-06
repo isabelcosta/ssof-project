@@ -1,17 +1,42 @@
-TRACE START [2015-12-04 22:47:10]
-    0.0007     124848   -> {main}() /var/www/html/index.php:0
-    0.0010     125324     -> loadData($file = 'data.json') /var/www/html/index.php:26
-    0.0010     125352       -> file_exists('data.json') /var/www/html/index.php:47
-    0.0010     125352        >=> FALSE
-    0.0010     125428       -> pg_escape_bytea(array ()) /var/www/html/index.php:50
-    0.0011     125444        >=> '[]'
-    0.0011     125396       -> pg_query('data.json', '[]') /var/www/html/index.php:50
-    0.0012     125556        >=> FALSE
-    0.0012     125512       -> file_get_contents('data.json') /var/www/html/index.php:54
-    0.0013     125512        >=> FALSE
-    0.0013     125540       -> json_decode(FALSE) /var/www/html/index.php:55
-    0.0013     125584        >=> NULL
-    0.0013     125512      >=> FALSE
-    0.0014       8452
-TRACE END   [2015-12-04 22:47:10]
+TRACE START [2015-12-06 01:32:57]
+    0.0005     124988   -> {main}() /var/www/html/index.php:0
+    0.0006     125044     -> shell_exec(NULL) /var/www/html/index.php:21
+    0.0020     125060      >=> NULL
+    0.0021     125044     -> mysql_escape_string(NULL) /var/www/html/index.php:23
+    0.0021     125076      >=> ''
+    0.0022     125044     -> mysql_query(NULL) /var/www/html/index.php:24
+    0.0985     125224      >=> FALSE
+    0.0986     125208     -> shell_exec(NULL) /var/www/html/index.php:28
+    0.1000     125224      >=> NULL
+    0.1001     125180    >=> 1
+    0.1003       8280
+TRACE END   [2015-12-06 01:32:57]
+
+TRACE START [2015-12-06 01:33:05]
+    0.0001     125332   -> {main}() /var/www/html/index.php:0
+    0.0001     125360     -> shell_exec('hey') /var/www/html/index.php:21
+    0.0016     125400      >=> NULL
+    0.0016     125400     -> mysql_escape_string('hey') /var/www/html/index.php:23
+    0.0016     125416      >=> 'hey'
+    0.0016     125400     -> mysql_query('hey') /var/www/html/index.php:24
+    0.0743     125568      >=> FALSE
+    0.0743     125568     -> shell_exec('hey') /var/www/html/index.php:28
+    0.0759     125568      >=> NULL
+    0.0760     125568    >=> 1
+    0.0761       8304
+TRACE END   [2015-12-06 01:33:05]
+
+TRACE START [2015-12-06 01:33:11]
+    0.0002     125336   -> {main}() /var/www/html/index.php:0
+    0.0002     125364     -> shell_exec('okokuvrey') /var/www/html/index.php:21
+    0.0082     125404      >=> NULL
+    0.0084     125404     -> mysql_escape_string('okokuvrey') /var/www/html/index.php:23
+    0.0086     125432      >=> 'okokuvrey'
+    0.0086     125404     -> mysql_query('okokuvrey') /var/www/html/index.php:24
+    0.0093     125568      >=> FALSE
+    0.0093     125568     -> shell_exec('okokuvrey') /var/www/html/index.php:28
+    0.0112     125568      >=> NULL
+    0.0113     125568    >=> 1
+    0.0115       8308
+TRACE END   [2015-12-06 01:33:11]
 

@@ -1,0 +1,17 @@
+TRACE START [2015-12-04 22:47:10]
+    0.0007     124848   -> {main}() /var/www/html/index.php:0
+    0.0010     125324     -> loadData($file = 'data.json') /var/www/html/index.php:26
+    0.0010     125352       -> file_exists('data.json') /var/www/html/index.php:47
+    0.0010     125352        >=> FALSE
+    0.0010     125428       -> pg_escape_bytea(array ()) /var/www/html/index.php:50
+    0.0011     125444        >=> '[]'
+    0.0011     125396       -> pg_query('data.json', '[]') /var/www/html/index.php:50
+    0.0012     125556        >=> FALSE
+    0.0012     125512       -> file_get_contents('data.json') /var/www/html/index.php:54
+    0.0013     125512        >=> FALSE
+    0.0013     125540       -> json_decode(FALSE) /var/www/html/index.php:55
+    0.0013     125584        >=> NULL
+    0.0013     125512      >=> FALSE
+    0.0014       8452
+TRACE END   [2015-12-04 22:47:10]
+

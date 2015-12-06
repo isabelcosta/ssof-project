@@ -119,7 +119,8 @@ def discover_vulnerability(dict_patterns, functions):
                     
                     
     print "-----------------------------------------------------------------"                        
-    print "---- Found vulnerability controlled by sanitization function ----"    
+    print "---- Found a possible vulnerability with a sanitizer function ---"
+    print "-----------------------------------------------------------------"    
     for warn in warnings:
         if(warn[1] != ''):
             print "- Vulnerability: ", warn[0]
@@ -128,7 +129,8 @@ def discover_vulnerability(dict_patterns, functions):
             print "- Args used by Sensitive Sink function: ", ", ".join(warn[3])
 
     print "-----------------------------------------------------------------"                        
-    print "---- Found possible vulnerability ----"                                                
+    print "-- Found a possible vulnerability without a sanitizer function --" 
+    print "-----------------------------------------------------------------"
     for warn in warnings:
         if(warn[1] == ''):
             print "- Vulnerability: ", warn[0]
